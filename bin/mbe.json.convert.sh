@@ -5,4 +5,4 @@
 
 python -c "import sys,json;print json.loads(open(sys.argv[1]).read())['files']" $1
 
-./router.sh $1
+./router.convert.sh $1
