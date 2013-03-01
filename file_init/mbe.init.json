@@ -1,0 +1,11 @@
+{
+    "name": "%@",
+    "description": "",
+    "create date": "%@",
+    "author": "amoblin <amoblin@gmail.com>",
+    "files": [
+        "/media/bin/SUBTYPE.TYPE.sh",
+        "/media/file_init/SUBTYPE.init.TYPE",
+        "/media/templates/SUBTYPE.TYPE.template.html"
+    ]
+}
