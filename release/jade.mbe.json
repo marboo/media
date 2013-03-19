@@ -3,6 +3,6 @@
     "description": "Jade to HTML",
     "author": "amoblin <amoblin@gmail.com>",
     "files": [
-        "/media/bin/jade.sh"
+        "/media/bin/jade.convert.sh"
     ]
 }

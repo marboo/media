@@ -4,8 +4,7 @@
     "create date": "2013-03-01 10:31:52",
     "author": "amoblin <amoblin@gmail.com>",
     "files": [
-        "/media/bin/poem.md.sh",
         "/media/file_init/poem.init.md",
-        "/media/templates/poem.md.template.html"
+        "/media/templates/poem.template.html"
     ]
 }

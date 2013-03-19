@@ -19,4 +19,5 @@
 朋友啊 那不是花瓣  
 那是我凋零的心  
 
-(上述内容由模板文件 ~/.marboo/source/file_types/poem.init.md 复制而来)
+// This file is created from ~/.marboo/source/media/bin/poem.init.md
+// 本文件由 ~/.marboo/source/media/bin/poem.init.md 复制而来

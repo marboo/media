@@ -7,5 +7,9 @@
         "/media/bin/SUBTYPE.TYPE.sh",
         "/media/file_init/SUBTYPE.init.TYPE",
         "/media/templates/SUBTYPE.TYPE.template.html"
+    ],
+    "comment": [
+        "This file is created from ~/.marboo/source/media/bin/mbe.init.json",
+        "本文件由 ~/.marboo/source/media/bin/mbe.init.json 复制而来"
     ]
 }
