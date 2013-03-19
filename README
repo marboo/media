@@ -1,1 +1,16 @@
 # media for Marboo
+
+Now support:
+
+* markdown
+* reStructuredText
+* html
+* python
+* zip
+* tar.gz
+* c
+* ruby
+* Rakefile
+* Makefile
+* ...
+
