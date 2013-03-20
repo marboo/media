@@ -1,1 +1,1 @@
-open -a macvim $1
+open -a macvim "$1"

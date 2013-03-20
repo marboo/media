@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> ace.md.template </title>
+        <title> ace.template </title>
         <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="date" content="2013-03-20 06:46:57" />
+        <meta name="date" content="2013-03-20 14:00:57" />
         <meta name="generator" content="Marboo 0.6: http://marboo.biz" />
         <style type="text/css" media="screen">
             #editor {
@@ -32,12 +32,17 @@
             editor.setTheme("ace/theme/monokai");
 
             var editorSession = editor.getSession();
-            editorSession.setMode("ace/mode/markdown");
+            editorSession.setMode("ace/mode/python");
             editorSession.setValue(document.getElementById("source").value);
 
-            document.getElementById("preview").innerHTML = markdown.toHTML(editorSession.getValue());
+            var src = editorSession.getValue();
+            src = "    " + src.replace(/\n/g, "\n    ");
+            document.getElementById("preview").innerHTML = markdown.toHTML(src);
+
             editorSession.on('change', function() {
-                document.getElementById("preview").innerHTML = markdown.toHTML(editorSession.getValue());
+                var src = editorSession.getValue();
+                src = "    " + src.replace(/\n/g, "\n    ");
+                document.getElementById("preview").innerHTML = markdown.toHTML(src);
             });
         </script>
     </body>
