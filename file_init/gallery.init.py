@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # author: amoblin <amoblin@gmail.com>
 # Note:
-# This file is created from ~/.marboo/source/media/bin/gallery.init.py
-# 本文件由 ~/.marboo/source/media/bin/gallery.init.py 复制而来
+# This file is created from ~/.marboo/source/media/file_init/gallery.init.py
+# 本文件由 ~/.marboo/source/media/file_init/gallery.init.py 复制而来
 
 import os
 import mimetypes
