@@ -1,7 +1,7 @@
 {
-    "name": "%@",
+    "name": "%s",
     "description": "",
-    "create date": "%@",
+    "create date": "%s",
     "author": "amoblin <amoblin@gmail.com>",
     "files": [
         "/media/bin/SUBTYPE.TYPE.sh",
