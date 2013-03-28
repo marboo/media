@@ -1,1 +1,1 @@
-notepad.exe %1
+start notepad.exe %1
