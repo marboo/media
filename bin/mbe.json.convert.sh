@@ -9,5 +9,5 @@ args=`python -c "import os,sys,json;source=os.path.join(os.path.expanduser('~'),
 #echo zip $1.zip $args
 
 name=`basename "$1"`
-zip `echo $1 | sed -e 's/.mbe.json/.zip/g'` $args > /tmp/$name.txt
+zip `echo $1 | sed -e 's/.mbe.json/.mbe.zip/g'` $args > /tmp/$name.txt
 ./router.convert.sh /tmp/$name.txt
