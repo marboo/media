@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> editor.template </title>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="date" content="2013-04-15 23:16:57" />
+        <meta name="generator" content="Marboo 0.6.1: http://marboo.biz" />
+        <link rel="stylesheet" type="text/css" href="/media/css/marboo.css" media="screen" />
+    </head>
+    <body style="background-color:transparent">
+        <textarea id="source" style="display:none">%s</textarea>
+        <div id="editor"></div>
+        <input type="button" id="save_btn" value="保存"></input>
+
+        <script src="/media/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+            var saveButton = document.getElementById("save_btn");
+            alert(saveButton);
+
+            var editor = ace.edit("editor");
+            editor.setTheme("ace/theme/monokai");
+
+            var editorSession = editor.getSession();
+            editorSession.setMode("ace/mode/c");
+            editorSession.setValue(document.getElementById("source").value);
+
+            editorSession.on('change', function() {
+            });
+
+            var saveNote = function() {
+                marboo.save(editorSession.getValue());
+            }
+
+            saveButton.onclick = saveNote;
+        </script>
+    </body>
+</html>
