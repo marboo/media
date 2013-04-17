@@ -1,3 +1,7 @@
+html {
+    height: 95%;
+}
+
 body {
     /*
     background:url("/media/images/bg/marboo-Reeder-Noise.png");
@@ -9,9 +13,12 @@ body {
     background:url("/media/images/bg/marboo-灰.jpg");
     font-size: 14px;
     margin: 10px;
+    height: 100%;
 }
 
 #editor {
+    float: right;
+    position:fixed;
     bottom: 0px;
     right: 0px;
     width: 600px;
