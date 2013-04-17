@@ -1,4 +1,8 @@
 
+var saveButton = $("#save_btn");
+var closeButton = $("#close_btn");
+var zoomButton = $("#zoom_btn");
+
 if (currentFileName === undefined) {
     var currentFileName = "md";
 }
@@ -23,9 +27,8 @@ getMimeType = function(extension) {
   }
 };
 
-var saveButton = document.getElementById("save_btn");
-
 var editor = ace.edit("editor");
+editor.focus();
 editor.setTheme("ace/theme/monokai");
 
 // init editor content
@@ -44,7 +47,7 @@ if (currentFileName == "md" ||
     src = "    " + src.replace(/\n/g, "\n    ");
 }
 
-document.getElementById("preview").innerHTML = markdown.toHTML(src);
+$("#preview").append($(markdown.toHTML(src)));
 
 editorSession.on('change', function() {
     // preview
@@ -64,4 +67,29 @@ var saveNote = function() {
     marboo.save(editorSession.getValue());
 }
 
-saveButton.onclick = saveNote;
+var closeEditor = function() {
+    //marboo.saveEditor();
+    location.href = location.href.replace(".ace.html", ".html");
+}
+
+var zoomEditor = function() {
+    $("#editor-window").toggleClass("fullscreen");
+    zoomButton.toggleClass("zoom-out-btn");
+}
+
+saveButton.on("click", saveNote);
+closeButton.on("click", closeEditor);
+zoomButton.on("click", zoomEditor);
+
+var keys = {};
+
+$("#editor").keydown(function(e) {
+    keys[e.which] = true;
+    if (keys[91] && keys[83]) {
+        saveNote();
+    }
+});
+
+$("#editor").keyup(function (e) {
+    delete keys[e.which];
+});

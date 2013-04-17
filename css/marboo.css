@@ -16,15 +16,6 @@ body {
     height: 100%;
 }
 
-#editor {
-    float: right;
-    position:fixed;
-    bottom: 0px;
-    right: 0px;
-    width: 600px;
-    height: 400px;
-}
-
 .kbd {
     display: inline-block;
     margin: 0 0.1em;
