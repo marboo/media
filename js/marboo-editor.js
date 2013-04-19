@@ -30,6 +30,7 @@ getMimeType = function(extension) {
 var editor = ace.edit("editor");
 editor.focus();
 editor.setTheme("ace/theme/monokai");
+editor.setKeyboardHandler(ace.require("ace/keyboard/vim").handler);
 
 // init editor content
 var editorSession = editor.getSession();
@@ -93,3 +94,4 @@ $("#editor").keydown(function(e) {
 $("#editor").keyup(function (e) {
     delete keys[e.which];
 });
+

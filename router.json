@@ -13,7 +13,6 @@
     "json": ["", "bin/sc.convert.sh", "templates/sc.template.html"],
     "template.html": ["osx-init/template.init.html", "", ""],
     "zip": ["", "", "templates/sc.template.html"],
-    "ace": ["", "", "osx-templates/ace.template.html"],
 
     "default": ["file_init/default.init.md", "bin/router.convert.sh", "tempates/marboo.template.html"]
 }
