@@ -62,6 +62,7 @@ editorSession.on('change', function() {
     }
 
     document.getElementById("preview").innerHTML = markdown.toHTML(src);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, "preview"]);
 });
 
 var saveNote = function() {
@@ -82,16 +83,16 @@ saveButton.on("click", saveNote);
 closeButton.on("click", closeEditor);
 zoomButton.on("click", zoomEditor);
 
-var keys = {};
-
-$("#editor").keydown(function(e) {
-    keys[e.which] = true;
-    if (keys[91] && keys[83]) {
+editor.commands.addCommand({
+    name: 'myCommand',
+    bindKey: {win: 'Ctrl-S',  mac: 'Command-S'},
+    exec: function(editor) {
         saveNote();
-    }
+    },
+    readOnly: true // false if this command should not apply in readOnly mode
 });
 
-$("#editor").keyup(function (e) {
-    delete keys[e.which];
-});
+window.onbeforeunload = function confirmExit() {
+    return "保存修改";
+}
 
