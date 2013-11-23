@@ -7,5 +7,6 @@
 
 name=`basename "$1"`
 tmp_file=/tmp/$name
-markdown "$1"
+pandoc --toc "$1"
+# markdown "$1"
 #./router.convert.sh $tmp_file
