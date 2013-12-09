@@ -7,5 +7,5 @@
 
 #name=`basename "$1"`
 #tmp_file=/tmp/$name
-pandoc --toc "$1"
+pandoc "$1"
 #./router.convert.sh $tmp_file

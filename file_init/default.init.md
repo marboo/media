@@ -1,6 +1,3 @@
-[TOC]
-
 # %s
-
-%s
+<!-- create time: %s  -->
 
