@@ -1,7 +1,7 @@
 #!/usr/bin/env emacs --batch --script
 ;; Author: amoblin <amoblin@gmail.com>
-;; File Name: %s
-;; Create Time: %s
+;; File Name: org2html.el
+;; Create Time: 2013-12-09 17:25
 ;; This file is created from ~Marboo/media/file_init/default.init.el
 ;; 本文件由 ~Marboo/media/file_init/default.init.el　复制而来
 

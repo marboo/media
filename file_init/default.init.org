@@ -1,0 +1,4 @@
+#+TITLE: %s
+#+AUTHOR: amoblin <amoblin@gmail.com>
+#+DATE: %s
+
