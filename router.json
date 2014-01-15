@@ -1,22 +1,92 @@
 {
-    "binDir": "osx-bin",
-    "initDir": "file_init",
-    "templateDir": "osx-templates",
-
-    "md": ["", "osx-bin/md.convert.sh", "osx-templates/md.template.html"],
-    "id.md": ["", "bin/id.md.convert.sh", "osx-templates/md.template.html"],
-    "tex.md": ["", "osx-bin/md.convert.sh", "osx-templates/tex.md.template.html"],
-    "markdown": ["", "osx-bin/md.convert.sh", "osx-templates/md.template.html"],
-    "poem.md": ["", "osx-bin/md.convert.sh", "osx-templates/poem.template.html"],
-    "remark.md": ["", "bin/remark.md.convert.sh", "templates/remark.md.template.html"],
-    "rst": ["", "osx-bin/rst.convert.sh", "osx-templates/rst.template.html"],
-    "html": ["", "", "templates/html.template.html"],
-    "init.html": ["", "", "templates/init.template.html"],
-    "sh": ["", "bin/sc.convert.sh", "templates/sc.template.html"],
-    "json": ["", "bin/sc.convert.sh", "templates/sc.template.html"],
-    "mindmap.json": ["", "", "templates/mindmap.json.template.html"],
-    "template.html": ["osx-init/template.init.html", "", ""],
-    "zip": ["", "", "templates/sc.template.html"],
-
-    "default": ["file_init/default.init.md", "bin/router.convert.sh", "tempates/marboo.template.html"]
+    "rule": [{
+	"type": "Text",
+	"mime": "text",
+	"convert": [{
+	    "name": "highlight",
+	    "is_internal": 1,
+	    "output_file_extension": "html"
+	},{
+	    "name": "origin",
+	    "is_internal": 1,
+	    "output_file_extension": "*"
+	},{
+	    "name": "marbooTemplate",
+	    "is_template": 1,
+	    "output_file_extension": "html",
+	    "path": "templates/md.template.html"
+	},{
+	    "name": "highlightTemplate",
+	    "is_template": 1,
+	    "output_file_extension": "html",
+	    "path": "templates/sc.template.html"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["highlight", "highlightTemplate"]
+	}]
+    },{
+	"type": "Image",
+	"mime": "image",
+	"convert": [{
+	    "name": "displayImage",
+	    "is_internal": 1,
+	    "output_file_extension": "html"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["displayImage"]
+	}]
+    },{
+	"type": "HTML",
+	"extension": ["htm", "html"],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["origin"]
+	} ]
+    },{
+	"type": "Markdown",
+	"extension": ["md", "markdown"],
+	"convert": [{
+	    "name": "md2html",
+	    "is_internal": 1,
+	    "output_file_extension": "html"
+	},{
+	    "name": "remarkTemplate",
+	    "output_file_extension": "html",
+	    "is_template": 1,
+	    "path": "templates/remark.md.template.html"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["md2html", "marbooTemplate"]
+	},{
+	    "type": "remark",
+	    "router": ["remarkTemplate"]
+	}]
+    },{
+	"type": "reStructuredText",
+	"extension": ["rst"],
+	"convert": [{
+	    "name": "rst2html",
+	    "is_internal": 1,
+	    "output_file_extension": "html"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["rst2html"]
+	}]
+    },{
+	"type": "Org-mode",
+	"extension": ["org"],
+	"convert": [{
+	    "name": "org2html",
+	    "path": "bin/org.convert.sh",
+	    "output_file_extension": "html"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["org2html"]
+	}]
+    }]
 }

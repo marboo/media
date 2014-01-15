@@ -45,7 +45,8 @@
 (find-file infile-temp)
 (org-mode)
 (message "Exporting file:%s to HTML" infile-temp)
-(call-interactively 'org-export-as-html)
+(call-interactively 'org-export-as-html )
+;(org-export-as-html body-only)
 (write-file outfile)
 (delete-file infile-temp)
 

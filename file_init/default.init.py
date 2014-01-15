@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# -*- coding:utf8 -*-
+# -*- coding:utf-8 -*-
 # author: amoblin <amoblin@gmail.com>
 # file name: %s.py
 # create date: %s
