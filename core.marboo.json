@@ -1,0 +1,129 @@
+{
+    "isDevMode": 1,
+    "rule": [{
+	"type": "Text",
+	"mime": "text",
+	"convert": [{
+	    "name": "highlight",
+	    "is_internal": 1,
+	    "output_file_extension": "html"
+	},{
+	    "name": "origin",
+	    "is_internal": 1,
+	    "output_file_extension": "*"
+	},{
+	    "name": "marbooTemplate",
+	    "is_template": 1,
+	    "output_file_extension": "html",
+	    "path": "templates/md.template.html"
+	},{
+	    "name": "highlightTemplate",
+	    "is_template": 1,
+	    "output_file_extension": "html",
+	    "path": "templates/sc.template.html"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["highlight", "highlightTemplate"]
+	}]
+    },{
+	"type": "Image",
+	"mime": "image",
+	"convert": [{
+	    "name": "displayImage",
+	    "is_internal": 1,
+	    "output_file_extension": "html"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["displayImage", "marbooTemplate"]
+	}]
+    },{
+	"type": "HTML",
+	"extension": ["htm", "html"],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["origin"]
+	} ]
+    },{
+	"type": "Markdown",
+	"extension": ["md", "markdown"],
+	"convert": [{
+	    "name": "md2html",
+	    "is_internal": 1,
+	    "output_file_extension": "html"
+	},{
+	    "name": "remarkTemplate",
+	    "output_file_extension": "html",
+	    "is_template": 1,
+	    "path": "templates/remark.md.template.html"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["md2html", "marbooTemplate"]
+	},{
+	    "type": "remark.md",
+	    "router": ["remarkTemplate"]
+	}]
+    },{
+	"type": "reStructuredText",
+	"extension": ["rst"],
+	"convert": [{
+	    "name": "rst2html",
+	    "is_internal": 1,
+	    "output_file_extension": "html"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["rst2html"]
+	}]
+    },{
+	"type": "Org-mode",
+	"extension": ["org"],
+	"convert": [{
+	    "name": "org2html",
+	    "path": "bin/org.convert.sh",
+	    "output_file_extension": "html"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["org2html"]
+	}]
+    },{
+	"type": "JSON",
+	"extension": ["json"],
+	"convert": [{
+	    "name": "marboo json visiable",
+	    "path": "bin/marboo.json.convert.sh",
+	    "output_file_extension": "html"
+	}],
+	"mapper": [{
+	    "type": "marboo.json",
+	    "router": ["marboo json visiable", "marbooTemplate"]
+	}]
+    },{
+	"type": "Coffee Script",
+	"extension": ["coffee"],
+	"convert": [{
+	    "name": "coffee2js",
+	    "path": "bin/coffee.convert.sh",
+	    "output_file_extension": "js"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["highlight", "highlightTemplate"]
+	}]
+    },{
+	"type": "Jade Template",
+	"extension": ["jade"],
+	"convert": [{
+	    "name": "jade2html",
+	    "path": "bin/jade.convert.sh",
+	    "output_file_extension": "html"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["highlight", "highlightTemplate"]
+	}]
+    }]
+}
