@@ -15,7 +15,7 @@
 	    "name": "marbooTemplate",
 	    "is_template": 1,
 	    "output_file_extension": "html",
-	    "path": "templates/md.template.html"
+	    "path": "templates/marboo.template.html"
 	},{
 	    "name": "highlightTemplate",
 	    "is_template": 1,
@@ -75,7 +75,7 @@
 	}],
 	"mapper": [{
 	    "type": "*",
-	    "router": ["rst2html"]
+	    "router": ["rst2html", "marbooTemplate"]
 	}]
     },{
 	"type": "Org-mode",
@@ -87,7 +87,7 @@
 	}],
 	"mapper": [{
 	    "type": "*",
-	    "router": ["org2html"]
+	    "router": ["org2html", "marbooTemplate"]
 	}]
     },{
 	"type": "JSON",
