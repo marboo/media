@@ -46,6 +46,18 @@
 	    "router": ["origin"]
 	} ]
     },{
+	"type": "Video",
+	"mime": "video",
+	"convert": [{
+	    "name": "lisarn",
+	    "path": "bin/lisarn.sh",
+	    "output_file_extension": "html",
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["lisarn", "marbooTemplate"]
+	}]
+    },{
 	"type": "Markdown",
 	"extension": ["md", "markdown"],
 	"convert": [{
@@ -99,8 +111,20 @@
 	}],
 	"mapper": [{
 	    "type": "marboo.json",
-	    "router": ["marboo json visiable", "marbooTemplate"]
+	    "router": ["highlight", "highlightTemplate"]
 	}]
+    },{
+        "type": "CSV",
+        "extension": ["csv"],
+        "convert": [{
+            "name": "csv2html",
+            "path": "bin/csv2html.convert.sh",
+            "output_file_extension": "html"
+        }],
+        "mapper": [{
+            "type": "*",
+            "router": ["csv2html", "marbooTemplate"]
+        }]
     },{
 	"type": "Coffee Script",
 	"extension": ["coffee"],
