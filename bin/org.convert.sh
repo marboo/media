@@ -9,6 +9,10 @@ name=`basename "$1"`
 tmp_file=/tmp/$name.html
 #cat "$1"
 #./router.convert.sh $tmp_file
-./org2html.el -infile "$1" -outfile ${tmp_file}
+
+/usr/local/bin/emacs --batch --script ./org2html.el -infile "$1" -outfile ${tmp_file}
+#./org2html.el -infile "$1" -outfile ${tmp_file}
+
 cat ${tmp_file}
 rm -f ${tmp_file}
+#emacs test.org --batch --eval "(org-html-export-to-html)"

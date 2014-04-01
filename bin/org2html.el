@@ -5,6 +5,11 @@
 ;; This file is created from ~Marboo/media/file_init/default.init.el
 ;; 本文件由 ~Marboo/media/file_init/default.init.el　复制而来
 
+(require 'package)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+(add-to-list 'load-path "~/.emacs.d/elpa/org-20140331/")
+
 (defun is-option (str)
   ;; return true if string looks like a command line option
   (string-equal (substring str 0 1) "-"))
@@ -43,15 +48,24 @@
 (setq infile-temp (make-temp-name "/tmp/org2html-"))
 (copy-file infile infile-temp t)
 (find-file infile-temp)
-(org-mode)
 (message "Exporting file:%s to HTML" infile-temp)
+
+;(setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")))
+;(package-initialize)
+
+(org-mode)
+(message (version))
+(message (org-version))
 (setq optional nil
       to-buffer "*org-html-export*"
       body-only t)
 ;(org-export-as-html 3 optional to-buffer body-only)
+
 (call-interactively 'org-export-as-html)
-;(org-export-as-html)
-;(org-html-export-as-html body-only)
+
+(unless (version-list-< (version-to-list (org-version)) '(8 0 0))
+  (org-html-export-as-html body-only))
+
 (write-file outfile)
 (delete-file infile-temp)
 
