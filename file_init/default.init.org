@@ -1,9 +1,0 @@
-#+TITLE: %s
-#+AUTHOR: amoblin
-#+EMAIL: amoblin@gmail.com
-#+DATE: %s
-#+OPTIONS: ^:{}
-
-* 请修改模版文件
-** This file is created from ~/.marboo/source/media/file_init/default.init.py
-** 本文件由 ~/.marboo/source/media/file_init/default.init.py 复制而来

@@ -1,0 +1,97 @@
+{
+    "isDevMode": true,
+    "rule": [{
+	"type": "Text",
+	"mime": "text",
+	"convert": [{
+	    "name": "highlight",
+	    "is_internal": true,
+	    "output_file_extension": "html"
+	},{
+	    "name": "origin",
+	    "is_internal": true,
+	    "output_file_extension": "*"
+	},{
+	    "name": "marbooTemplate",
+	    "is_template": true,
+	    "output_file_extension": "html",
+	    "path": "templates/marboo.template.html"
+	},{
+	    "name": "highlightTemplate",
+	    "is_template": true,
+	    "output_file_extension": "html",
+	    "path": "templates/sc.template.html"
+	},{
+	    "name": "k2k",
+	    "is_internal": true,
+	    "output_file_extension": "txt"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "init": "starts/default",
+	    "router": ["highlight", "highlightTemplate"]
+	},{
+	    "type": "k2k.txt",
+	    "router": ["k2k", "highlight", "highlightTemplate"]
+	}]
+    },{
+	"type": "Image",
+	"mime": "image",
+	"convert": [{
+	    "name": "displayImage",
+	    "is_internal": 1,
+	    "output_file_extension": "html"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["displayImage", "marbooTemplate"]
+	}]
+    },{
+	"type": "HTML",
+	"extension": ["htm", "html"],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["origin"]
+	}]
+    },{
+	"type": "Markdown",
+	"extension": ["md", "markdown"],
+	"convert": [{
+	    "name": "md2html",
+	    "is_internal": 1,
+	    "output_file_extension": "html"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["md2html", "marbooTemplate"]
+	}]
+    },{
+	"type": "reStructuredText",
+	"extension": ["rst"],
+	"convert": [{
+	    "name": "rst2html",
+	    "is_internal": 1,
+	    "output_file_extension": "html"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "init": "starts/default.rst",
+	    "router": ["rst2html", "marbooTemplate"]
+	}]
+    },{
+	"type": "System UI",
+	"subtype": ["alert"],
+	"convert": [{
+	    "name": "showAlert",
+	    "path": "converts/alert.sh"
+	},{
+	    "name": "alertTemplate",
+	    "is_template": true,
+	    "path": "views/alert.html"
+	}],
+	"mapper": [{
+	    "type": "alert",
+	    "router": ["showAlert", "alertTemplate"]
+	}]
+    }]
+}

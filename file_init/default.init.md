@@ -1,3 +1,0 @@
-# %s
-<!-- create time: %s  -->
-

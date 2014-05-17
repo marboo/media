@@ -1,22 +1,21 @@
-#+TITLE: media for Marboo
+#+TITLE: Marboo Main Config
 #+AUTHOR: amoblin
 #+EMAIL: amoblin@gmail.com
 #+DATE: 2014-01-15 22:42:20
 #+OPTIONS: ^:{}
 
-* media for Marboo
-
-Now support:
+Contains:
 
 - markdown
 - reStructuredText
 - html
-- python
+
+* Syntax Highlight for Code
+
+
+
+Supported Packages:
+
 - zip
 - tar.gz
-- c
-- ruby
-- Rakefile
-- Makefile
-- ...
 

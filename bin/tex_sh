@@ -1,3 +1,0 @@
-pdflatex --output-directory=/tmp $1 > /dev/null
-mv /tmp/`basename $1 .tex`.pdf ~/.marboo/build/media/latex.pdf
-echo -n latex
