@@ -15,12 +15,12 @@
 	    "name": "marbooTemplate",
 	    "is_template": true,
 	    "output_file_extension": "html",
-	    "path": "templates/marboo.template.html"
+	    "path": "views/marboo.html"
 	},{
 	    "name": "highlightTemplate",
 	    "is_template": true,
 	    "output_file_extension": "html",
-	    "path": "templates/sc.template.html"
+	    "path": "views/highlight.html"
 	},{
 	    "name": "k2k",
 	    "is_internal": true,
@@ -51,6 +51,7 @@
 	"extension": ["htm", "html"],
 	"mapper": [{
 	    "type": "*",
+	    "init": "starts/default.html",
 	    "router": ["origin"]
 	}]
     },{
@@ -77,6 +78,18 @@
 	    "type": "*",
 	    "init": "starts/default.rst",
 	    "router": ["rst2html", "marbooTemplate"]
+	}]
+    },{
+	"type": "ZIP",
+	"extension": ["zip"],
+	"convert": [{
+	    "name": "zipList",
+	    "path": "converts/zip-list.sh"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["zipList", "highlight", "marbooTemplate"]
+
 	}]
     },{
 	"type": "System UI",
