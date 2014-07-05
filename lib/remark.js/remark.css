@@ -1,6 +1,11 @@
+/*
       @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
       @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+*/
+      @import url(fonts.googleapis.com_css_family=Droid+Serif.css);
+      @import url(fonts.googleapis.com_css_family=Yanone+Kaffeesatz.css);
+      @import url(fonts.googleapis.com_css_family=Ubuntu+Mono_400,700,400italic.css);
 
       body {
         font-family: 'Droid Serif';
