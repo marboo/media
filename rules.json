@@ -32,6 +32,10 @@
 	    "name": "k2k",
 	    "is_internal": true,
 	    "output_file_extension": "txt"
+	},{
+	    "name": "vextabTemplate",
+	    "is_template": true,
+	    "path": "views/vextab.txt.html"
 	}],
 	"mapper": [{
 	    "type": "*",
@@ -46,6 +50,9 @@
 	},{
 	    "type": "k2k.txt",
 	    "router": ["k2k", "highlight", "highlightTemplate"]
+	},{
+	    "type": "vextab.txt",
+	    "router": ["vextabTemplate"]
 	},{
 	    "type": "sh",
 	    "init": "starts/default.sh"
@@ -76,6 +83,18 @@
 	"mapper": [{
 	    "type": "*",
 	    "router": ["displayAudio", "marbooTemplate"]
+	}]
+    },{
+	"type": "Video",
+	"mime": "video",
+	"convert": [{
+	    "name": "displayVideo",
+	    "path": "converts/video2html.sh",
+	    "output_file_extension": "html"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "router": ["displayVideo", "marbooTemplate"]
 	}]
     },{
 	"type": "HTML",

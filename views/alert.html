@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=320, initial-scale=1.0, user-scalable=no" charset="utf-8">
-        <title> alert.template </title>
+        <title> {{title}} </title>
+	<meta name="marboo-template" content="alert.html">
+        <meta name="viewport" content="width=320, initial-scale=1.0, user-scalable=yes" charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="date" content="2013-06-01 15:13:55" />
-        <meta name="generator" content="Marboo 0.6: http://marboo.biz" />
+        <meta name="generator" content="Marboo 0.8: http://marboo.biz" />
+
         <link rel="stylesheet" type="text/css" href="/media/css/bootstrap.min.css" media="screen" />
         <link rel="stylesheet" type="text/css" href="/media/css/pygmentize-default.css" media="screen" />
         <link rel="stylesheet" type="text/css" href="/media/css/marboo.css" media="screen" />
@@ -38,7 +40,7 @@
         # 本文件由 $MARBOO_ROOT/media/starts/default.html 复制而来
         -->
         <div style="top:30%%; margin-top: 100px; height:50px;">
-            %s
+            {{content}}
         </div>
         <footer class="footer" style="text-align:center; margin:50px 0">
         </footer>

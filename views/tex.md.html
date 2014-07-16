@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> tex.md.template </title>
-        <meta charset="utf-8" />
+        <title> {{title}} </title>
+	<meta name="marboo-template" content="tex.md.html">
+	<meta name="viewport" content="width=320, initial-scale=1.0, user-scalable=yes" charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="date" content="2013-03-20 14:31:01" />
-        <meta name="generator" content="Marboo 0.6: http://marboo.biz" />
-        <link rel="stylesheet" type="text/css" href="/media/css/bootstrap.css" media="screen" />
+        <meta name="generator" content="Marboo 0.8: http://marboo.biz" />
+
+        <link rel="stylesheet" type="text/css" href="/media/css/bootstrap.min.css" media="screen" />
         <link rel="stylesheet" type="text/css" href="/media/css/marboo.css" media="screen" />
 
 	<script type="text/x-mathjax-config">
@@ -32,10 +34,7 @@
         </script>
     </head>
     <body>
-      %s
-
-
-
+      {{content}}
       <script type="text/x-mathjax-config">
 	MathJax.Hub.Config({
 	tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
