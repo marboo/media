@@ -39,6 +39,10 @@
 	    "output_file_extension": "html",
 	    "path": "views/highlight.html"
 	},{
+	    "name": "shiftRight",
+	    "is_internal": true,
+	    "output_file_extension": "code",
+	},{
 	    "name": "k2k",
 	    "is_internal": true,
 	    "output_file_extension": "txt"
@@ -193,16 +197,41 @@
 	    "router": ["txt2tags", "marbooTemplate"]
 	}]
     },{
-	"type": "ZIP",
-	"extension": ["zip"],
+	"type": "CSV",
+	"extension": ["csv"],
 	"convert": [{
-	    "name": "zipList",
-	    "path": "converts/zip-list.sh"
+            "name": "csv2html",
+	    "is_internal": true,
+            "output_file_extension": "html"
 	}],
 	"mapper": [{
-	    "type": "*",
-	    "router": ["zipList", "highlight", "marbooTemplate"]
-
+            "type": "*",
+            "router": ["csv2html", "marbooTemplate"]
+	}]
+    },{
+	"type": "Archived File",
+	"extension": ["zip", "tar", "tar.gz", "tar.bz"],
+	"convert": [{
+	    "name": "zipList",
+	    "path": "converts/zip-list.sh",
+	    "output_file_extension": "md"
+	},{
+	    "name": "tarList",
+	    "path": "converts/tar-list.sh",
+	    "output_file_extension": "md"
+	}],
+	"mapper": [{
+	    "type": "zip",
+	    "router": ["zipList", "md2html", "markdownTemplate"]
+	},{
+	    "type": "tar",
+	    "router": ["tarList", "md2html", "markdownTemplate"]
+	},{
+	    "type": "tar.bz",
+	    "router": ["tarList", "md2html", "markdownTemplate"]
+	},{
+	    "type": "tar.gz",
+	    "router": ["tarList", "md2html", "markdownTemplate"]
 	}]
     },{
 	"type": "System UI",

@@ -3,7 +3,7 @@
 A __paragraph__ with **bold** and //italic//.
 
 Today is %%date(%c).
-Here is a nice pic: [img/t2tpowered.png].
+Here is a nice pic: [./snow.jpg].
 
   | John |  33  |    Male |
   | Mary |  19  |  Female |
