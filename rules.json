@@ -24,6 +24,16 @@
 	    "output_file_extension": "html",
 	    "path": "views/md.html"
 	},{
+	    "name": "orgTemplate",
+	    "is_template": true,
+	    "output_file_extension": "html",
+	    "path": "views/org.html"
+	},{
+	    "name": "textileTemplate",
+	    "is_template": true,
+	    "output_file_extension": "html",
+	    "path": "views/textile.html"
+	},{
 	    "name": "highlightTemplate",
 	    "is_template": true,
 	    "output_file_extension": "html",
@@ -147,6 +157,40 @@
 	    "type": "*",
 	    "init": "starts/default.rst",
 	    "router": ["rst2html", "marbooTemplate"]
+	}]
+    },{
+	"type": "Org mode",
+	"extension": ["org"],
+	"mapper": [{
+	    "type": "*",
+	    "init": "starts/default.org",
+	    "router": ["orgTemplate"]
+	}]
+    },{
+	"type": "Textile",
+	"extension": ["textile"],
+	"convert": [{
+	    "name": "textile2html",
+	    "is_internal": true,
+	    "output_file_extension": "html"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "init": "starts/default.textile",
+	    "router": ["textile2html", "marbooTemplate"]
+	}]
+    },{
+	"type": "txt2tags",
+	"extension": ["t2t"],
+	"convert": [{
+	    "name": "txt2tags",
+	    "is_internal": true,
+	    "output_file_extension": "html"
+	}],
+	"mapper": [{
+	    "type": "*",
+	    "init": "starts/default.t2t",
+	    "router": ["txt2tags", "marbooTemplate"]
 	}]
     },{
 	"type": "ZIP",
