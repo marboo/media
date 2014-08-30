@@ -3,7 +3,7 @@
     <head>
         <title> {{title}} </title>
 	<meta name="marboo-template" content="marboo template">
-	<meta name="viewport" content="width=320, initial-scale=1.0, user-scalable=yes" charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="generator" content="Marboo 0.8: http://marboo.biz" />
 	<meta name="keywords" content="Marboo" />
@@ -34,5 +34,10 @@
     </head>
     <body>
       {{content}}
+	<script type="text/javascript" src="/media/js/Autolinker.min.js"></script>
+	<script type="text/javascript">
+	  var myTextEl = document.body;
+	  myTextEl.innerHTML = Autolinker.link( myTextEl.innerHTML );
+	</script>
     </body>
 </html>

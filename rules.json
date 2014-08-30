@@ -1,6 +1,7 @@
 {
     "description": "DO NOT modify this file. If you want custom settings, make directory under `packages`, and create a `rules.json` under that directory, writting like this",
     "isDevMode": true,
+    "ignoredDirs": ["Pods"],
     "rule": [{
 	"type": "Text",
 	"extension": ["txt"],
@@ -57,7 +58,7 @@
 	    "router": ["highlight", "highlightTemplate"]
 	},{
 	    "type": "txt",
-	    "router": ["md2html", "marbooTemplate"]
+	    "router": ["highlight", "highlightTemplate"]
 	},{
 	    "type": "plist",
 	    "router": ["highlight", "highlightTemplate"]
@@ -169,6 +170,10 @@
 	    "type": "*",
 	    "init": "starts/default.org",
 	    "router": ["orgTemplate"]
+	},{
+	    "type": "reveal.org",
+	    "init": "starts/default.reveal.org",
+	    "router": ["orgTemplate"]
 	}]
     },{
 	"type": "Textile",
@@ -232,6 +237,13 @@
 	},{
 	    "type": "tar.gz",
 	    "router": ["tarList", "md2html", "markdownTemplate"]
+	}]
+    },{
+	"type": "Javascript",
+	"extension": ["js"],
+	"mapper": [{
+	    "type": "*",
+	    "init": "starts/default.js"
 	}]
     },{
 	"type": "System UI",

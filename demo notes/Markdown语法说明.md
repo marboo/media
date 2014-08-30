@@ -12,7 +12,7 @@
   [g]: http://gitcafe.com/riku/Markdown-Syntax-CN
   [Github]: https://github.com/riku/Markdown-Syntax-CN
 
-Markdown 语法说明 (简体中文版) / ([点击查看快速入门](./basic.html))
+Markdown 语法说明 (简体中文版) / ([点击查看快速入门](./basics.md.html))
 ================
 
 *   [概述](#overview)

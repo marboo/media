@@ -7,7 +7,8 @@
 
 name=`basename "$1"`
 #tmp_file=/tmp/$name
-echo "<div class=\"player\">\n\
+echo "<h1>$name</h1>\
+<div class=\"player\" style=\"margin-top:100px; text-align:center\">\n\
   <audio controls=\"\" name=\"media\">\n \
     <source src=\"$name\" type=\"audio/mpeg\">\n \
   </audio>\n \

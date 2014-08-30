@@ -7,7 +7,7 @@
 
 name=`basename "$1"`
 #tmp_file=/tmp/$name
-echo "<div class=\"player\" style=\"text-align:center\">\n\
+echo "<h1>$name</h1><div class=\"player\" style=\"margin-top:100px;text-align:center\">\n\
   <video controls=\"\" name=\"media\" width=\"80%\">\n \
     <source src=\"$name\" type=\"video/mp4\">\n \
   </video>\n \
