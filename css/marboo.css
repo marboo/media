@@ -17,11 +17,11 @@ body {
       background:url("/media/images/bg/marboo-Reeder-Noise.png");
       background:url("/media/images/bg/marboo-灰.jpg");
       */
-    background-color: #eeeeee;
+    background-color: white;
 
     /* 设置所有笔记的字号大小 */
     font-size: 14px !important;
-    color: black;
+    color: rgb(88,88,88);
 
     padding: 0px 15px 15px 15px;
 }

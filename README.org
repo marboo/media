@@ -8,7 +8,10 @@
 
 - markdown
 - reStructuredText
-- html
+- Org-mode
+- Textile
+- txt2tag
+- HTML
 - zip
 
 * Syntax Highlight for Code

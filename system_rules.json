@@ -1,6 +1,8 @@
 {
-    "description": "DO NOT modify this file. If you want custom settings, make directory under `packages`, and create a `rules.json` under that directory, writting like this",
-    "isDevMode": true,
+    "description": "DO NOT modify this file. If you want custom settings, modify the custom_rules.json, writting like this",
+    "description_cn": "不要修改这个文件。自定义的话，修改custom_rules.json文件，格式参考本文。",
+    "isDevMode": false,
+    "shouldInitContentForCommandLine": false,
     "ignoredDirs": ["Pods"],
     "rule": [{
 	"type": "Text",
@@ -42,7 +44,7 @@
 	},{
 	    "name": "shiftRight",
 	    "is_internal": true,
-	    "output_file_extension": "code",
+	    "output_file_extension": "code"
 	},{
 	    "name": "k2k",
 	    "is_internal": true,
@@ -74,13 +76,16 @@
 	},{
 	    "type": "py",
 	    "init": "starts/default.py"
+	},{
+	    "type": "go",
+	    "init": "starts/default.go"
 	}]
     },{
 	"type": "Image",
 	"mime": "image",
 	"convert": [{
 	    "name": "displayImage",
-	    "is_internal": 1,
+	    "is_internal": true,
 	    "output_file_extension": "html"
 	}],
 	"mapper": [{
@@ -124,7 +129,7 @@
 	"extension": ["md", "markdown"],
 	"convert": [{
 	    "name": "md2html",
-	    "is_internal": 1,
+	    "is_internal": true,
 	    "output_file_extension": "html"
 	},{
 	    "name": "remarkTemplate",
@@ -155,7 +160,7 @@
 	"extension": ["rst"],
 	"convert": [{
 	    "name": "rst2html",
-	    "is_internal": 1,
+	    "is_internal": true,
 	    "output_file_extension": "html"
 	}],
 	"mapper": [{
