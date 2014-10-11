@@ -5,7 +5,6 @@
 
 .. |date| date:: 2011-11-25
 .. title:: |rst| 简明教程
-.. publish:: NO
 
 |time|
 

@@ -1,5 +1,5 @@
 
-default: base pygmentize misc sc poem html5
+default: base pygmentize misc html5
 	echo "Done!" > "测 试".count.md
 	#make clean
 
@@ -17,7 +17,7 @@ base:
 	echo "你好" >> "测 试".t2t; sleep 1
 
 	touch "测 试".textile; sleep 1;
-	echo "你好" >> "测 试".textile; sleep 1
+	echo "\n你好" >> "测 试".textile; sleep 1
 
 	touch "测 试".html; sleep 1;
 	echo 你好 >> "测 试".html; sleep 1

@@ -1,7 +1,7 @@
 #+TITLE: {{title}}
 #+AUTHOR: amoblin
 #+EMAIL: amoblin@gmail.com
-#+DATE: {{date}}
+#+DATE: <{{date}}>
 #+OPTIONS: ^:{}
 
 * 请修改模版文件

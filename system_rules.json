@@ -79,6 +79,9 @@
 	},{
 	    "type": "go",
 	    "init": "starts/default.go"
+	},{
+	    "type": "swift",
+	    "init": "starts/default.swift"
 	}]
     },{
 	"type": "Image",
@@ -154,6 +157,10 @@
 	    "type": "tex.md",
 	    "init": "starts/default.md",
 	    "router": ["md2html", "mathJaxTemplate"]
+	},{
+	    "type": "apib",
+	    "init": "starts/default.apib",
+	    "router": ["md2html", "markdownTemplate"]
 	}]
     },{
 	"type": "reStructuredText",
