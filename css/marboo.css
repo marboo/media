@@ -47,14 +47,13 @@ article {
  }
 
  pre.literal-block, pre.doctest-block, div.highlight > pre {
-     //background: transparent;
-     //background-color: #ffffff;
-     trans
+/*     background: transparent; */
+/*     background-color: #ffffff; */
      display: inline-block;
-//     margin: 0 2em 0 2em;
+/*     margin: 0 2em 0 2em; */
      padding: 10px;
-     //border: thin solid #AAF;
-     //border-radius: .5em;
+/*     border: thin solid #AAF;
+     border-radius: .5em; */
 }
 
 #toc {

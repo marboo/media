@@ -1,0 +1,35 @@
+{
+    "description": "用户自定义配置文件",
+    "filename": "{{title}}",
+    "created_at": "{{date}}",
+
+    "comment": "不监控以下目录下的变化",
+    "ignored_dirs": [
+    ],
+    
+    "comment": "监控以下软链目录下的变化",
+    "symbollink_dirs": [
+    ],
+    
+    "comment": "在左栏显示Marboo配置文件夹",
+    "show_media_dir": true,
+ 
+    "comment": "设置目录浏览器",
+    "folder_viewer": "Terminal",
+
+    "comment": "设置文件编辑器",
+    "file_editor": "Emacs",
+
+    "comment": "设置网页浏览器",
+    "web_browser": "Default",
+    
+    "comment": "设置对于命令下下创建的文件，是否按照Marboo配置进行初始化",
+    "init_content_for_commandline": false,
+
+    "comment": "********************** Rules Begin ******************",
+
+
+
+    
+    "comment": "********************** THE END ******************"
+}

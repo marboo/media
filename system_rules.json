@@ -2,9 +2,12 @@
     "description": "DO NOT modify this file. If you want custom settings, modify the custom_rules.json, writting like this",
     "description_cn": "不要修改这个文件。自定义的话，修改custom_rules.json文件，格式参考本文。",
     "isDevMode": false,
+    "FolderViewer": "Finder",
+    "editor": "Finder",
+    "user_config_path": "MyNotes.localized/marboo_config.json",
     "shouldInitContentForCommandLine": false,
     "ignoredDirs": ["Pods"],
-    "rule": [{
+    "rules": [{
 	"type": "Text",
 	"extension": ["txt"],
 	"mime": "text",

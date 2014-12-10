@@ -1,5 +1,5 @@
 {
-    "ignoredDirs": ["/Users/amoblin/Marboo/Projects/MyProjects/Marboo/Marboo-OSX/home_dir"],
-    "isDevMode": true,
+    "description": "Writing custom rules here.",
+    "isDevMode": false,
     "shouldInitContentForCommandLine": false
 }
