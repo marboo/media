@@ -12,18 +12,18 @@
     ],
     
     "comment": "在左栏显示Marboo配置文件夹",
-    "show_media_dir": true,
+    "show_media_dir": false,
  
     "comment": "设置目录浏览器",
-    "folder_viewer": "Terminal",
+    "folder_viewer": "Finder",
 
     "comment": "设置文件编辑器",
-    "file_editor": "Emacs",
+    "file_editor": "Finder",
 
     "comment": "设置网页浏览器",
     "web_browser": "Default",
     
-    "comment": "设置对于命令下下创建的文件，是否按照Marboo配置进行初始化",
+    "comment": "设置对于命令下创建的文件，是否按照Marboo配置进行初始化",
     "init_content_for_commandline": false,
 
     "comment": "********************** Rules Begin ******************",
