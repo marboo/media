@@ -2,6 +2,8 @@
 # author: amoblin <amoblin@gmail.com.com>
 # file name: Podfile
 # create date: {{date}}
+# This file is created from $MARBOO_HOME/.media/starts/Podfile
+# 本文件由 $MARBOO_HOME/.media/starts/Podfile 复制而来
  
 platform :ios, '7.0'
 source 'https://github.com/CocoaPods/Specs.git'

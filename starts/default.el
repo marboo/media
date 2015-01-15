@@ -3,5 +3,5 @@
 ;; File Name: {{title}}.el
 ;; Description: TODO
 ;; Create Time: {{date}}
-;; This file is created from $MARBOO_HOME/media/starts/default.el
-;; 本文件由 $MARBOO_HOME/media/starts/default.el　复制而来
+;; This file is created from $MARBOO_HOME/.media/starts/default.el
+;; 本文件由 $MARBOO_HOME/.media/starts/default.el　复制而来

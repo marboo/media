@@ -4,10 +4,10 @@
 #+DATE: {{date}}
 #+OPTIONS: ^:{}
 
-#+REVEAL_ROOT: /media/lib/reveal.js-2.6.2
+#+REVEAL_ROOT: /.media/lib/reveal.js-2.6.2
 #+REVEAL_TRANS: linear
-#+REVEAL_THEME: moon
+#+REVEAL_THEME: white-red
 
 * 请修改模版文件
-** This file is created from $MARBOO_HOME/media/starts/default.reveal.org
-** 本文件由 $MARBOO_HOME/media/starts/default.reveal.org 复制而来
+** This file is created from $MARBOO_HOME/.media/starts/default.reveal.org
+** 本文件由 $MARBOO_HOME/.media/starts/default.reveal.org 复制而来

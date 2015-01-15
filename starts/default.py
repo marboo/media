@@ -4,8 +4,8 @@
 # file name: {{title}}.py
 # description: TODO
 # create date: {{date}}
-# This file is created from $MARBOO_HOME/media/starts/default.py
-# 本文件由 $MARBOO_HOME/media/starts/default.py 复制而来
+# This file is created from $MARBOO_HOME/.media/starts/default.py
+# 本文件由 $MARBOO_HOME/.media/starts/default.py 复制而来
 
 import sys
 
