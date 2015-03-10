@@ -2,7 +2,7 @@
 #+AUTHOR: amoblin
 #+EMAIL: amoblin@gmail.com
 #+DATE: {{date}}
-#+OPTIONS: ^:{}
+#+OPTIONS: ^:{} toc:nil num:nil
 
 #+REVEAL_ROOT: /.media/lib/reveal.js-2.6.2
 #+REVEAL_TRANS: linear

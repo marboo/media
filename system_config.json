@@ -2,11 +2,13 @@
     "description": "DO NOT modify this file. If you want custom settings, modify the marboo_config.json, writting like this",
     "description_cn": "不要修改这个文件。自定义的话，修改 marboo_config.json 文件，格式参考本文。",
     "show_media_dir": false,
+    "show_recent_files_dir": true,
     "folder_viewer": "Finder",
-    "file_editor": "Finder",
+    "file_editor": "TextEdit",
     "web_browser": "Default",
     "init_content_for_commandline": false,
     "ignored_dirs": ["Pods"],
+    "generate_html_with_file_extension": false,
     "rules": [{
         "file_category": "text",
         "pips": [{
@@ -50,6 +52,15 @@
 	},{
 	    "filename": "Podfile",
 	    "init": "starts/Podfile",
+	},{
+	    "filename": "Makefile",
+	    "init": "starts/Makefile",
+	},{
+	    "filename": "Rakefile",
+	    "init": "starts/Rakefile",
+	},{
+	    "filename": "Jakefile",
+	    "init": "starts/Jakefile",
         },{
             "filename": "*.vextab.txt",
             "pipline": ["vextabTemplate"]
@@ -76,10 +87,10 @@
         "file_category": "image",
         "pips": [{
             "name": "displayImage"
-        }],
+	}],
         "piplines": [{
             "pipline": ["displayImage", "marbooTemplate"]
-        }]
+	}]
     },{
         "file_category": "audio",
         "pips": [{
@@ -94,9 +105,23 @@
         "pips": [{
             "name": "displayVideo",
             "path": "converts/video2html.sh"
+	},{
+	    "name": "displayFlash",
+	    "path": "converts/flash2html.sh"
         }],
         "piplines": [{
             "pipline": ["displayVideo", "marbooTemplate"]
+	},{
+	    "filename": "*.swf",
+	    "pipline": ["displayFlash", "marbooTemplate"]
+	}]
+    },{
+        "file_category": "application",
+        "pips": [{
+            "name": ""
+        }],
+        "piplines": [{
+            "pipline": ["showAlert", "alertTemplate"]
         }]
     },{
 	"file_type": "Html",

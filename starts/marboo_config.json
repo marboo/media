@@ -13,12 +13,15 @@
     
     "comment": "在左栏显示Marboo配置文件夹",
     "show_media_dir": false,
+
+    "comment": "在左栏显示最近打开的文件",
+    "show_recent_files_dir": true,
  
     "comment": "设置目录浏览器",
     "folder_viewer": "Finder",
 
     "comment": "设置文件编辑器",
-    "file_editor": "Finder",
+    "file_editor": "TextEdit",
 
     "comment": "设置网页浏览器",
     "web_browser": "Default",
@@ -26,6 +29,9 @@
     "comment": "设置对于命令下创建的文件，是否按照Marboo配置进行初始化",
     "init_content_for_commandline": false,
 
+    "comment": "生成HTML时保留原文件的扩展名",
+    "generate_html_with_file_extension": false,
+    
     "comment": "********************** Rules Begin ******************",
 
 

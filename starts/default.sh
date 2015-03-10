@@ -7,4 +7,4 @@
 # 本文件由 $MARBOO_HOME/.media/starts/default.sh　复制而来
 
 #name=`basename "$1"`
-#tmp_file=/tmp/$name
+#name_without_extension=`echo ${name%.*}`
