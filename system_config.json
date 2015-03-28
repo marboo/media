@@ -1,10 +1,28 @@
 {
     "description": "DO NOT modify this file. If you want custom settings, modify the marboo_config.json, writting like this",
     "description_cn": "不要修改这个文件。自定义的话，修改 marboo_config.json 文件，格式参考本文。",
+    "new_file_types": [{
+        "display_name": "MarkDown",
+        "file_extension": "md"
+    },{
+        "display_name": "RST",
+        "file_extension": "rst"
+    },{
+        "display_name": "Text",
+        "file_extension": "txt"
+    },{
+        "display_name": "HTML",
+        "file_extension": "html"
+    },{
+        "display_name": "Custom",
+        "file_extension": ""
+    }],
+
+    "max_file_process_number_in_one_second": 1,
     "show_media_dir": false,
     "show_recent_files_dir": true,
     "folder_viewer": "Finder",
-    "file_editor": "TextEdit",
+    "file_editor": "Default",
     "web_browser": "Default",
     "init_content_for_commandline": false,
     "ignored_dirs": ["Pods"],
