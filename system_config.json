@@ -5,14 +5,14 @@
         "display_name": "MarkDown",
         "file_extension": "md"
     },{
-        "display_name": "RST",
+        "display_name": "reStructured Text",
         "file_extension": "rst"
+    },{
+        "display_name": "Org-mode",
+        "file_extension": "org"
     },{
         "display_name": "Text",
         "file_extension": "txt"
-    },{
-        "display_name": "HTML",
-        "file_extension": "html"
     },{
         "display_name": "Custom",
         "file_extension": ""
@@ -22,6 +22,7 @@
     "show_media_dir": false,
     "show_recent_files_dir": true,
     "folder_viewer": "Finder",
+    "folder_terminal_viewer": "Terminal",
     "file_editor": "Default",
     "web_browser": "Default",
     "init_content_for_commandline": false,
@@ -31,6 +32,16 @@
         "file_category": "text",
         "pips": [{
             "name": "highlight"
+        },{
+            "name": "selfRender"
+        },{
+            "name": "generateFileListFromContent"
+        },{
+            "name": "getContentFromURL"
+        },{
+            "name": "json2csv"
+        },{
+            "name": "html2text"
         },{
             "name": "origin",
             "output_file_extension": "*"
@@ -97,6 +108,20 @@
 	},{
 	    "filename": "*.js",
 	    "init": "starts/default.js"
+	},{
+	    "filename": "*.json",
+	    "init": "starts/default.json"
+	},{
+	    "filename": "*.app.json",
+	    "init": "starts/app.json",
+            "pipline": ["selfRender", "highlight", "highlightTemplate"]
+        },{
+	    "filename": "*.datasource.json",
+	    "init": "starts/datasource.json",
+            "pipline": ["generateFileListFromContent", "highlight", "highlightTemplate"]
+        },{
+            "filename": "*.request.json",
+            "pipline": ["getContentFromURL", "highlight", "highlightTemplate"]
 	},{
 	    "filename": "*.csv",
 	    "pipline": ["csv2html", "marbooTemplate"]
@@ -192,6 +217,12 @@
             "file_name": "*.reveal.org",
             "init": "starts/default.reveal.org",
             "pipline": ["orgTemplate"]
+        },{
+            "file_name": "*.org_archive",
+            "pipline": ["orgTemplate"]
+        },{
+            "file_name": "*.reveal.org_archive",
+            "pipline": ["orgTemplate"]
         }]
     },{
         "file_type": "Textile",
@@ -234,6 +265,12 @@
         },{
             "filename": "*.tar.gz",
             "pipline": ["tarList", "md2html", "markdownTemplate"]
+        },{
+            "filename": "*.epub",
+            "pipline": ["zipList", "md2html", "markdownTemplate"]
+        },{
+            "filename": "*.docx",
+            "pipline": ["zipList", "md2html", "markdownTemplate"]
         }]
     },{
         "file_type": "System UI",

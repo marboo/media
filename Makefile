@@ -8,3 +8,7 @@ default:
 	rm -f /tmp/marboo/media.zip
 	@cd /tmp;zip -r ~/Downloads/marboo_templates_v1.zip marboo > /dev/null
 	ls -l -h ~/Downloads/marboo_templates_v1.zip
+
+install:
+	cp libs/highlightjs/highlight.pack.js lib/highlight.js/highlight.pack.js
+	cp libs/highlightjs/styles/github.css lib/highlight.js/styles

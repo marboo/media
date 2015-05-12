@@ -1,8 +1,8 @@
 {
-    "description": "用户自定义配置文件",
     "filename": "{{title}}",
     "created_at": "{{date}}",
-
+    "description": "用户自定义配置文件",
+    
     "attation": "注意这里的引号一定要是英文引号。TextEdit中可能会出现输入的英文引号变为中文引号，从而导致配置文件无法加载。",
     
     "comment": "不监控以下目录下的变化",
@@ -34,6 +34,8 @@
     "5.file_editor": "Mou",
     "6.file_editor": "Sublime Text",
     "7.file_editor": "TextMate",
+
+    "folder_terminal_viewer": "Terminal",
 
     "comment": "设置网页浏览器。Default代表默认浏览器，也可以设置已安装的浏览器如Google Chrome, Firefox等",
     "web_browser": "Default",
