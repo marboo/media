@@ -3,7 +3,5 @@
 #+EMAIL: amoblin@gmail.com
 #+DATE: <{{date}}>
 #+OPTIONS: ^:{}
-
-* 请修改模版文件
-** This file is created from $MARBOO_HOME/.media/starts/default.org
-** 本文件由 $MARBOO_HOME/.media/starts/default.org 复制而来
+# This file is created by Marboo<http://marboo.io> template file $MARBOO_HOME/.media/starts/default.org
+# 本文件由 Marboo<http://marboo.io> 模板文件 $MARBOO_HOME/.media/starts/default.org 创建

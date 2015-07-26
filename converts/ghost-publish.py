@@ -3,8 +3,8 @@
 # author: amoblin <amoblin@gmail.com>
 # file name: ghost-publish.py
 # create date: 2014-08-30 16:14:13
-# This file is created from $MARBOO_HOME/media/starts/default.py
-# 本文件由 $MARBOO_HOME/media/starts/default.py 复制而来
+# This file is created by Marboo<http://marboo.io> template file $MARBOO_HOME/.media/starts/default.py
+# 本文件由 Marboo<http://marboo.io> 模板文件 $MARBOO_HOME/.media/starts/default.py 创建
 
 import sys
 import json

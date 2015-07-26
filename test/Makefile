@@ -40,12 +40,12 @@ pygmentize:
 
 misc:
 	# 其他类型测试
-	touch CNAME; sleep 1; echo marboo.biz > CNAME; sleep 1
-	touch domains.config; sleep 1; echo amoblin.marboo.biz > domains.config
+	touch CNAME; sleep 1; echo marboo.io > CNAME; sleep 1
+	touch domains.config; sleep 1; echo amoblin.marboo.io > domains.config
 
 jekyll:
 	# DO NOT support yet.
-	#jekyll . /tmp/marboo.biz
+	#jekyll . /tmp/marboo.io
 
 clean:
 	rm -f "测 试".*
