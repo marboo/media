@@ -1,7 +1,0 @@
-#+TITLE: {{title}}
-#+AUTHOR: amoblin
-#+EMAIL: amoblin@gmail.com
-#+DATE: <{{date}}>
-#+OPTIONS: ^:{}
-# This file is created by Marboo<http://marboo.io> template file $MARBOO_HOME/.media/starts/default.org
-# 本文件由 Marboo<http://marboo.io> 模板文件 $MARBOO_HOME/.media/starts/default.org 创建

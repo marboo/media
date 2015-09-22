@@ -2,6 +2,13 @@
     "description": "DO NOT modify this file. If you want custom settings, modify the marboo_config.json, writting like this",
     "description_cn": "不要修改这个文件。自定义的话，修改 marboo_config.json 文件，格式参考本文。",
     "created_by_marboo_version": "1.0",
+
+    "author": "amoblin",
+    "email": "amoblin@gmail.com",
+
+    "show_media_dir": false,
+    "show_recent_files_dir": true,
+
     "new_file_types": [{
         "display_name": "MarkDown",
         "file_extension": "md"
@@ -19,16 +26,8 @@
         "file_extension": ""
     }],
 
-    "max_highlighted_file_size": 1024,
+    "generate_html_with_file_extension": false,
     
-    "url_mappings": [],
-
-    "symbollink_dirs": [],
-    "only_show_files": [],
-
-    "max_file_process_number_in_one_second": 1,
-    "show_media_dir": false,
-    "show_recent_files_dir": true,
     "folder_viewer": "Finder",
     "folder_terminal_viewer": "Terminal",
     "file_editor": "Default",
@@ -39,10 +38,18 @@
     "comment": "lock view时其他文件修改时是否刷新当前文件",
     "refresh_file_in_lock_view": false,
     
-    "ignored_dirs": ["Pods"],
+    "symbollink_dirs": [],
+    "only_show_files": [],
+    "ignored_dirs": ["Pods", "_book", "xcuserdata", ".git"],
     
-    "generate_html_with_file_extension": false,
-    
+    "max_highlighted_file_size": 1024,
+    "max_file_process_number_in_one_second": 1,
+
+    "url_mappings": [{
+        "path": "/Guide.localized",
+        "server": "GitBook"
+    }],
+
     "rules": [{
         "file_category": "text",
         "pips": [{
@@ -62,26 +69,11 @@
         },{
             "name": "html2text"
         },{
-            "name": "origin",
-            "output_file_extension": "*"
-        },{
             "name": "marbooTemplate",
             "template_path": "views/marboo.html"
         },{
             "name": "textTemplate",
             "template_path": "views/textTemplate.html"
-        },{
-            "name": "markdownTemplate",
-            "template_path": "views/md.html"
-        },{
-            "name": "orgTemplate",
-            "template_path": "views/org.html"
-        },{
-            "name": "texOrgTemplate",
-            "template_path": "views/tex.org.html"
-        },{
-            "name": "textileTemplate",
-            "template_path": "views/textile.html"
         },{
             "name": "highlightTemplate",
             "template_path": "views/highlight.html"
@@ -89,65 +81,15 @@
             "name": "shiftRight",
             "output_file_extension": "code"
         },{
+            "name": "code2md",
+            "output_file_extension": "md"
+        },{
             "name": "k2k",
             "output_file_extension": "txt"
-        },{
-            "name": "vextabTemplate",
-            "template_path": "views/vextab.txt.html"
-	},{
-            "name": "csv2html"
         }],
         "piplines": [{
             "init": "starts/default",
             "pipline": ["highlight", "highlightTemplate"]
-	},{
-	    "filename": "marboo_config.json",
-	    "init": "starts/marboo_config.json"
-	},{
-	    "filename": "Podfile",
-	    "init": "starts/Podfile",
-	},{
-	    "filename": "Makefile",
-	    "init": "starts/Makefile",
-	},{
-	    "filename": "Rakefile",
-	    "init": "starts/Rakefile",
-	},{
-	    "filename": "Jakefile",
-	    "init": "starts/Jakefile",
-        },{
-            "filename": "*.vextab.txt",
-            "pipline": ["vextabTemplate"]
-        },{
-            "filename": "*.c",
-            "init": "starts/default.c"
-        },{
-            "filename": "*.m",
-            "init": "starts/default.m"
-        },{
-            "filename": "*.h",
-            "init": "starts/default.h"
-        },{
-            "filename": "*.sh",
-            "init": "starts/default.sh"
-        },{
-            "filename": "*.py",
-            "init": "starts/default.py"
-        },{
-            "filename": "*.rb",
-            "init": "starts/default.rb"
-        },{
-            "filename": "*.go",
-            "init": "starts/default.go"
-        },{
-            "filename": "*.swift",
-            "init": "starts/default.swift"
-	},{
-	    "filename": "*.js",
-	    "init": "starts/default.js"
-	},{
-	    "filename": "*.json",
-	    "init": "starts/default.json"
 	},{
 	    "filename": "*.app.json",
 	    "init": "starts/app.json",
@@ -158,10 +100,14 @@
             "pipline": ["generateFileListFromContent", "highlight", "highlightTemplate"]
         },{
             "filename": "*.request.json",
+            "init": "starts/request.json",
             "pipline": ["selfRender"]
-	},{
-	    "filename": "*.csv",
-	    "pipline": ["csv2html", "marbooTemplate"]
+        },{
+            "filename": "marboo_config.json",
+            "init": "starts/marboo_config.json"
+        },{
+            "filename": "rules.json",
+            "init": "starts/rules.json"
         }]
     },{
         "file_category": "image",
@@ -209,8 +155,7 @@
     },{
 	"file_type": "Html",
         "piplines": [{
-            "init": "starts/default.html",
-            "pipline": ["origin"]
+            "init": "starts/default.html"
         }]
     },{
         "file_type": "Custom",
@@ -222,78 +167,15 @@
             "pipline": ["executeFile", "highlight", "highlightTemplate"]
         }]
     },{
-        "file_type": "Markdown",
-        "pips": [{
-            "name": "md2html"
-        },{
-            "name": "remarkTemplate",
-            "template_path": "views/remark.md.html"
-        },{
-            "name": "mathJaxTemplate",
-            "template_path": "views/tex.md.html"
-        }],
-        "piplines": [{
-            "init": "starts/default.md",
-            "pipline": ["md2html", "markdownTemplate"]
-        },{
-            "filename": "*.remark.md",
-            "init": "starts/default.remark.md",
-            "pipline": ["remarkTemplate"]
-        },{
-            "filename": "*.tex.md",
-            "init": "starts/default.md",
-            "pipline": ["md2html", "mathJaxTemplate"]
-        },{
-            "filename": "*.apib",
-            "init": "starts/default.apib",
-            "pipline": ["md2html", "markdownTemplate"]
-        }]
-    },{
-        "file_type": "reStructuredText",
-        "pips": [{
-            "name": "rst2html"
-        }],
-        "piplines": [{
-            "init": "starts/default.rst",
-            "pipline": ["rst2html", "marbooTemplate"]
-        }]
-    },{
-        "file_type": "Orgmode",
-        "piplines": [{
-            "init": "starts/default.org",
-            "pipline": ["orgTemplate"]
-        },{
-            "filename": "*.tex.org",
-            "pipline": ["texOrgTemplate"]
-        },{
-            "filename": "*.reveal.org",
-            "init": "starts/default.reveal.org"
-        },{
-            "filename": "*.org_archive",
-            "pipline": ["orgTemplate"]
-        }]
-    },{
         "piplines": [{
             "filename": "*.txt",
             "pipline": ["textTemplate"]
         }]
     },{
-        "file_type": "Textile",
-        "pips": [{
-            "name": "textile2html"
-        }],
+        "file_type": "VimWiki",
         "piplines": [{
-            "init": "starts/default.textile",
-            "pipline": ["textile2html", "marbooTemplate"]
-        }]
-    },{
-        "file_type": "Txt2tags",
-        "pips": [{
-            "name": "txt2tags"
-        }],
-        "piplines": [{
-            "init": "starts/default.t2t",
-            "pipline": ["txt2tags", "marbooTemplate"]
+            "filename": "*.wiki",
+            "editor": "MacVim"
         }]
     },{
         "file_type": "Archived File",
@@ -306,21 +188,22 @@
             "path": "converts/tar-list.sh",
             "output_file_extension": "md"
         }],
-        "piplines": [{
+       "piplines": [{
             "filename": "*.zip",
             "pipline": ["zipList", "md2html", "markdownTemplate"]
         },{
             "filename": "*.tar",
             "pipline": ["tarList", "md2html", "markdownTemplate"]
-        },{
+       },{
             "filename": "*.tar.bz",
             "pipline": ["tarList", "md2html", "markdownTemplate"]
         },{
-            "filename": "*.tar.gz",
+           "filename": "*.tar.gz",
             "pipline": ["tarList", "md2html", "markdownTemplate"]
         },{
             "filename": "*.epub",
-            "pipline": ["zipList", "md2html", "markdownTemplate"]
+            "editor": "Default",
+           "pipline": ["zipList", "md2html", "markdownTemplate"]
         },{
             "filename": "*.docx",
             "pipline": ["zipList", "md2html", "markdownTemplate"]
